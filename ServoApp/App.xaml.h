@@ -1,4 +1,4 @@
-﻿//
+//
 // App.xaml.h
 // Declaration of the App class.
 //

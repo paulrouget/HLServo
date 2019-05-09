@@ -1,4 +1,4 @@
-﻿//
+//
 // App.xaml.cpp
 // Implementation of the App class.
 //

@@ -1,4 +1,4 @@
-﻿//
+//
 // MainPage.xaml.h
 // Declaration of the MainPage class.
 //
