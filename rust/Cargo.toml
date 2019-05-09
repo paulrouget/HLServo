@@ -1,0 +1,9 @@
+[package]
+name = "hlservo"
+version = "0.1.0"
+authors = ["Paul Rouget"]
+edition = "2018"
+
+[lib]
+name = "hlservo"
+crate-type = ["cdylib"]
