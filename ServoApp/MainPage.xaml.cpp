@@ -37,19 +37,20 @@ MainPage::MainPage()
 {
   InitializeComponent();
 
-  HMODULE ret = LoadDLL(L"hlservo.dll");
+  HMODULE ret = LoadDLL(L"simpleservo");
 
-  FARPROC r = GetProcAddress(ret, "foobar");
+  FARPROC r = GetProcAddress(ret, "servo_version");
   if (r == NULL) {
     LogWithError(L"GetProcAddress failed");
     return;
   }
 
-  int v = (int)r();
+  char * v = (char *)r();
 
-  // std::string s_str = std::string(v);
-  // std::wstring wid_str = std::wstring(s_str.begin(), s_str.end());
-  // const wchar_t* w_char = wid_str.c_str();
-  //  Log(w_char);
+  std::string s_str = std::string(v);
+  std::wstring wid_str = std::wstring(s_str.begin(), s_str.end());
+  const wchar_t* w_char = wid_str.c_str();
+
+  Log(w_char);
 }
 

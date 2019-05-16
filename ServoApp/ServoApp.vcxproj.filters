@@ -8,6 +8,9 @@
       <UniqueIdentifier>5152f9cf-0c84-42f0-a853-853b1ae6989a</UniqueIdentifier>
       <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
     </Filter>
+    <Filter Include="ServoDLLs">
+      <UniqueIdentifier>{2c623c60-889b-4bf1-bce5-7e047ed5a3f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -50,7 +53,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ServoApp_TemporaryKey.pfx" />
-    <None Include="hlservo.dll" />
+    <None Include="api-ms-win-crt-runtime-l1-1-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="ffi-7.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gio-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="glib-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gmodule-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gobject-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstapp-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstaudio-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstbase-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstgl-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstpbutils-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstplayer-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstreamer-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstrtp-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstsdp-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gsttag-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstvideo-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="gstwebrtc-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="intl-8.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="libcryptoMD.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="libsslMD.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="libwinpthread-1.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="msvcp140.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="nspr4.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="orc-0.4-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="simpleservo.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="vcruntime140.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="z-1.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
