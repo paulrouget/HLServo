@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "MainPage.xaml.h"
 
-using namespace Windows::UI::Xaml::Controls;
 using namespace ServoApp;
 
 void Log(const wchar_t* msg) {
@@ -52,5 +51,6 @@ MainPage::MainPage()
   const wchar_t* w_char = wid_str.c_str();
 
   Log(w_char);
+
 }
 
