@@ -36,6 +36,21 @@ MainPage::MainPage()
 {
   InitializeComponent();
 
+  /* Test hlservo
+  HMODULE ret = LoadDLL(L"hlservo");
+  FARPROC r = GetProcAddress(ret, "foobar");
+  if (r == NULL) {
+	  LogWithError(L"GetProcAddress failed");
+	  return;
+  }
+  int v = (int)r();
+  wchar_t msg[256];
+  swprintf(msg, 255, L"%i\r\n", v);
+  OutputDebugString(msg);
+  */
+
+
+  /* Test simpleservo.dll */
   HMODULE ret = LoadDLL(L"simpleservo");
 
   FARPROC r = GetProcAddress(ret, "servo_version");
@@ -51,6 +66,7 @@ MainPage::MainPage()
   const wchar_t* w_char = wid_str.c_str();
 
   Log(w_char);
-
+  
+  
 }
 

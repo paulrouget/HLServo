@@ -7,6 +7,3 @@ edition = "2018"
 [lib]
 name = "hlservo"
 crate-type = ["cdylib"]
-
-[dependencies]
-rust-webvr = { path = "../../rust-webvr/rust-webvr/"}
