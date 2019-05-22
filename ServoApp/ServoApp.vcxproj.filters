@@ -53,9 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ServoApp_TemporaryKey.pfx" />
-    <None Include="hlservo.dll">
-      <Filter>ServoDLLs</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
