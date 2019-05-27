@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Publisher="CN=Mozilla Tmp" Version="1.0.22.0"  Name="ServoApp"/>
+  <Identity Publisher="CN=Mozilla Tmp" Version="1.0.23.0"  Name="ServoApp"/>
   <mp:PhoneIdentity PhoneProductId="f205d827-ea39-4396-a687-254efada5564" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>ServoApp</DisplayName>
