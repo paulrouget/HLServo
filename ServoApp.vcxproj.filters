@@ -51,100 +51,187 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="..\servo\target\debug\api-ms-win-crt-runtime-l1-1-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\ffi-7.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gio-2.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\glib-2.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gmodule-2.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gobject-2.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstapp-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstaudio-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstbase-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstgl-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstpbutils-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstplayer-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstreamer-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstrtp-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstsdp-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gsttag-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstvideo-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\gstwebrtc-1.0-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\intl-8.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\libcryptoMD.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\libsslMD.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\libwinpthread-1.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\msvcp140.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\nspr4.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\orc-0.4-0.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\simpleservo.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\vcruntime140.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="..\servo\target\debug\z-1.dll">
-      <Filter>ServoDLLs</Filter>
+      <Filter>ServoDLLsDebug</Filter>
     </None>
     <None Include="ServoApp_TemporaryKey.pfx" />
+    <None Include="..\servo\target\release\api-ms-win-crt-runtime-l1-1-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\ffi-7.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gio-2.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\glib-2.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gmodule-2.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gobject-2.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstapp-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstaudio-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstbase-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstgl-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstpbutils-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstplayer-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstreamer-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstrtp-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstsdp-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gsttag-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstvideo-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\gstwebrtc-1.0-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\intl-8.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\libcryptoMD.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\libsslMD.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\libwinpthread-1.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\msvcp140.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\nspr4.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\orc-0.4-0.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\simpleservo.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\vcruntime140.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
+    <None Include="..\servo\target\release\z-1.dll">
+      <Filter>ServoDLLsRelease</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
       <UniqueIdentifier>{f663883d-5302-4e09-82e3-094b0a4fa9bc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ServoDLLs">
-      <UniqueIdentifier>{851a4628-484c-4859-bb9b-3153914487f5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{45140811-c74b-4497-ba07-a7610fe2fef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServoDLLsDebug">
+      <UniqueIdentifier>{851a4628-484c-4859-bb9b-3153914487f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServoDLLsRelease">
+      <UniqueIdentifier>{96a56d11-301b-46ec-b081-50010b467ebf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
