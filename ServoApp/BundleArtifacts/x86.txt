@@ -1,2 +1,0 @@
-MainPackage=C:\msys64\home\paul\git\HLServo\Debug\ServoApp\ServoApp_1.0.6.0_Win32_Debug.msix
-SymbolPackage=C:\msys64\home\paul\git\HLServo\ServoApp\Debug\Symbols\ServoApp_1.0.6.0_Win32_Debug.appxsym

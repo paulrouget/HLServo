@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)OpenGLES.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Servo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)OpenGLES.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Servo.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="..\servo\target\debug\api-ms-win-crt-runtime-l1-1-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\ffi-7.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gio-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\glib-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gmodule-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gobject-2.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstapp-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstaudio-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstbase-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstgl-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstpbutils-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstplayer-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstreamer-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstrtp-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstsdp-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gsttag-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstvideo-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\gstwebrtc-1.0-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\intl-8.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\libcryptoMD.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\libsslMD.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\libwinpthread-1.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\msvcp140.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\nspr4.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\orc-0.4-0.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\simpleservo.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\vcruntime140.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="..\servo\target\debug\z-1.dll">
+      <Filter>ServoDLLs</Filter>
+    </None>
+    <None Include="ServoApp_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{f663883d-5302-4e09-82e3-094b0a4fa9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServoDLLs">
+      <UniqueIdentifier>{851a4628-484c-4859-bb9b-3153914487f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{45140811-c74b-4497-ba07-a7610fe2fef9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Filter>src</Filter>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="OpenGLESPage.xaml">
+      <Filter>src</Filter>
+    </Page>
+  </ItemGroup>
+</Project>
