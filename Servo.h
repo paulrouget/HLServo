@@ -7,7 +7,7 @@ class Servo {
 public:
     Servo(GLsizei width, GLsizei height);
     ~Servo();
-    void PerformUpdates();
+    bool PerformUpdates();
     void SetSize(GLsizei width, GLsizei height);
 
 private:

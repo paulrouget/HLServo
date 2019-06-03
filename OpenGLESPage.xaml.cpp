@@ -110,8 +110,8 @@ void OpenGLESPage::StartRenderLoop()
         // If the call fails, then we must reinitialize EGL and the GL resources.
         mOpenGLES->GetSurfaceDimensions(mRenderSurface, &panelWidth, &panelHeight);
         mServo->SetSize(panelWidth, panelHeight);
-        mServo->PerformUpdates();
-        if (mOpenGLES->SwapBuffers(mRenderSurface) != GL_TRUE) {
+        bool swap = mServo->PerformUpdates();
+        if (swap && mOpenGLES->SwapBuffers(mRenderSurface) != GL_TRUE) {
           // XAML objects like the SwapChainPanel must only be manipulated on the UI thread.
           swapChainPanel->Dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::High, ref new Windows::UI::Core::DispatchedHandler([=]() {
             RecoverFromLostDevice();

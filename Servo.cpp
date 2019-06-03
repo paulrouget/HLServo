@@ -7,6 +7,8 @@ extern "C" {
 
 using namespace hlservo;
 
+static bool dirty = false;
+
 void on_load_started() {}
 void on_load_ended() {}
 void on_title_changed(const char* foo) {}
@@ -25,12 +27,12 @@ void make_current()
 
 void wakeup()
 {
+  dirty = true;
 }
 
 void on_animating_changed(bool aAnimating)
 {
 }
-
 
 
 Servo::Servo(GLsizei width, GLsizei height)
@@ -65,9 +67,14 @@ Servo::~Servo()
 {
 }
 
-void Servo::PerformUpdates()
+bool Servo::PerformUpdates()
 {
-  perform_updates();
+  if (dirty) {
+    perform_updates();
+    dirty = false;
+    return true;
+  }
+  return false;
 }
 
 void Servo::SetSize(GLsizei width, GLsizei height)
