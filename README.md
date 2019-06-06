@@ -13,10 +13,13 @@ With Visual Studio **2019**:
 
 In your Visual Studio **2017** cmd prompt:
 - make sure libEGL.dll is in your `%LIB%` path: `set LIB=%LIB%;c:\XXX\HLServo\packages\ANGLE.WindowsStore.2.1.13\bin\UAP\x64\`
-- compile servo: `mach build -d --libsimpleservo --features raqote_backend`
+- compile servo: `mach build -d --libsimpleservo --features raqote_backend no_wgl`
 
 With Visual Studio **2019**:
 - Select emulator or local machine, select configuration (Debug or Release) and press run
 - VS will look for the DLLs and .h in `../servo/target/debug|release/` (depending on the configuration you selected in VS) and copy them in the final package.
 
 For now, it's not possible to interact with the web page.
+
+Note: to build the project with MSBuild:
+- `MSBuild ServoApp.sln /p:Configuration=Debug /p:Platform=x64`
