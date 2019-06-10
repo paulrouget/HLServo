@@ -7,39 +7,37 @@ extern "C" {
 
 using namespace hlservo;
 
-static bool dirty = false;
-
 void on_load_started() {}
 void on_load_ended() {}
-void on_title_changed(const char* foo) {}
-void on_url_changed(const char* foo) {}
+void on_title_changed(const char* title) {}
+void on_url_changed(const char* url) {}
 void on_history_changed(bool back, bool fwd) {}
 void on_shutdown_complete() {}
 
+std::function<void()> Servo::sFlush = [](){};
+std::function<void()> Servo::sMakeCurrent = [](){};
+std::function<void()> Servo::sWakeUp = [](){};
 
-void flush()
-{
+void flush() {
+  Servo::sFlush();
 }
 
-void make_current()
-{
+void make_current() {
+  Servo::sMakeCurrent();
 }
 
-void wakeup()
-{
-  dirty = true;
+void wakeup() {
+  Servo::sWakeUp();
 }
 
-void on_animating_changed(bool aAnimating)
-{
+void on_animating_changed(bool aAnimating) {
+  // FIXME
 }
-
 
 Servo::Servo(GLsizei width, GLsizei height)
   : mAnimating(false)
   , mWindowHeight(height)
-  , mWindowWidth(width)
-{
+  , mWindowWidth(width) {
 
   CInitOptions o;
   o.args = NULL;
@@ -63,22 +61,14 @@ Servo::Servo(GLsizei width, GLsizei height)
   init_with_egl(o, &wakeup, c);
 }
 
-Servo::~Servo()
-{
+Servo::~Servo() {
 }
 
-bool Servo::PerformUpdates()
-{
-  if (dirty) {
-    perform_updates();
-    dirty = false;
-    return true;
-  }
-  return false;
+void Servo::PerformUpdates() {
+  perform_updates();
 }
 
-void Servo::SetSize(GLsizei width, GLsizei height)
-{
+void Servo::SetSize(GLsizei width, GLsizei height) {
   if (width != mWindowWidth || height != mWindowHeight) {
     mWindowWidth = width;
     mWindowHeight = height;
