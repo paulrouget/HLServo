@@ -7,6 +7,8 @@ using namespace Platform;
 using namespace Concurrency;
 using namespace Windows::Foundation;
 
+static char sWakeupEvent[] = "SIGNAL_WAKEUP";
+
 OpenGLESPage::OpenGLESPage()
     : OpenGLESPage(nullptr)
 {
@@ -77,58 +79,64 @@ void OpenGLESPage::StartRenderLoop()
         return;
     }
 
-    auto wakeup = []() {
-
-      // perform_updates();
-    };
-
-    auto init = [this](Windows::Foundation::IAsyncAction ^ action) {
+    auto loop = [this](Windows::Foundation::IAsyncAction ^ action) {
       critical_section::scoped_lock lock(mRenderSurfaceCriticalSection);
-      mOpenGLES->MakeCurrent(mRenderSurface);
 
-      /*
-      auto makeCurrent = [this]() {
+      HANDLE hEvent = ::CreateEventA(nullptr, FALSE, FALSE, sWakeupEvent);
+
+      // Called by Servo
+      Servo::sMakeCurrent = [this]() {
+        /* EGLint panelWidth = 0; */
+        /* EGLint panelHeight = 0; */
+        /* mOpenGLES->GetSurfaceDimensions(mRenderSurface, &panelWidth, &panelHeight); */
+        /* glViewport(0, 0, panelWidth, panelHeight); */
+        /* mServo->SetSize(panelWidth, panelHeight); */
         mOpenGLES->MakeCurrent(mRenderSurface);
       };
 
-      auto flush = [this]() -> bool {
-        return mOpenGLES->SwapBuffers(mRenderSurface);
+      // Called by Servo
+      Servo::sFlush = [this]() {
+        if (mOpenGLES->SwapBuffers(mRenderSurface) != GL_TRUE) {
+          // The call to eglSwapBuffers might not be successful (i.e. due to Device Lost)
+          // If the call fails, then we must reinitialize EGL and the GL resources.
+          swapChainPanel->Dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::High, ref new Windows::UI::Core::DispatchedHandler([=]() {
+                RecoverFromLostDevice();
+          }, CallbackContext::Any));
+        }
       };
-      */
+
+      mOpenGLES->MakeCurrent(mRenderSurface);
 
       EGLint panelWidth = 0;
       EGLint panelHeight = 0;
       mOpenGLES->GetSurfaceDimensions(mRenderSurface, &panelWidth, &panelHeight);
       glViewport(0, 0, panelWidth, panelHeight);
-
       mServo = new Servo(panelWidth, panelHeight);
 
-      // Interesting: CoreWindow::GetForCurrentThread()->Dispatcher
-
       while (action->Status == Windows::Foundation::AsyncStatus::Started) {
-        // The call to eglSwapBuffers might not be successful (i.e. due to Device Lost)
-        // If the call fails, then we must reinitialize EGL and the GL resources.
-        mOpenGLES->GetSurfaceDimensions(mRenderSurface, &panelWidth, &panelHeight);
-        mServo->SetSize(panelWidth, panelHeight);
-        bool swap = mServo->PerformUpdates();
-        if (swap && mOpenGLES->SwapBuffers(mRenderSurface) != GL_TRUE) {
-          // XAML objects like the SwapChainPanel must only be manipulated on the UI thread.
-          swapChainPanel->Dispatcher->RunAsync(Windows::UI::Core::CoreDispatcherPriority::High, ref new Windows::UI::Core::DispatchedHandler([=]() {
-            RecoverFromLostDevice();
-            }, CallbackContext::Any));
-          return;
+        // Block until Servo::sWakeUp is called.
+        // Or run full speed if animating (see on_animating_changed),
+        // it will endup blocking on SwapBuffers to limit rendering to 60FPS
+        if (!Servo::sAnimating) {
+           ::WaitForSingleObject(hEvent, INFINITE);
         }
+        mServo->PerformUpdates();
       }
       
     };
 
-    auto workItemHandler = ref new Windows::System::Threading::WorkItemHandler(init);
+    auto workItemHandler = ref new Windows::System::Threading::WorkItemHandler(loop);
 
     // Run Servo task in a high priority background thread.
     mRenderLoopWorker = Windows::System::Threading::ThreadPool::RunAsync(
       workItemHandler,
       Windows::System::Threading::WorkItemPriority::High,
       Windows::System::Threading::WorkItemOptions::TimeSliced);
+
+    Servo::sWakeUp = []() {
+      HANDLE hEvent = ::OpenEventA(EVENT_ALL_ACCESS, FALSE, sWakeupEvent);
+      ::SetEvent(hEvent);
+    };
 }
 
 void OpenGLESPage::StopRenderLoop()
