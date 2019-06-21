@@ -122,7 +122,6 @@ void OpenGLESPage::StartRenderLoop()
         }
         mServo->PerformUpdates();
       }
-      
     };
 
     auto workItemHandler = ref new Windows::System::Threading::WorkItemHandler(loop);

@@ -63,6 +63,7 @@ Servo::Servo(GLsizei width, GLsizei height)
 }
 
 Servo::~Servo() {
+  deinit();
 }
 
 void Servo::PerformUpdates() {
